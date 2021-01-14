@@ -3,11 +3,15 @@ class Owner
   attr_reader :name, :species
 
   @@all = []
+  
 
   def initialize(name)
     @name = name
     @species = "human"
     @@all.push(self)
+    @all_cats = []
+    @all_dogs = []
+
   end
 
   def say_species
@@ -26,4 +30,19 @@ class Owner
     self.all.clear
   end
 
-end
+  def cats
+    @all_cats
+  end
+
+  def dogs
+    @all_dogs
+  end
+
+  def buy_cat(name)
+    Cat.new(name, self)
+  end
+
+
+end 
+
+

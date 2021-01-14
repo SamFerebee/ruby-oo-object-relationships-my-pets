@@ -10,6 +10,8 @@ class Cat
     @owner = owner_object
     @mood = "nervous"
     @@all.push(self)
+    @owner.cats.push(self)
+
   end
 
   def self.all
