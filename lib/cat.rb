@@ -11,7 +11,6 @@ class Cat
     @mood = "nervous"
     @@all.push(self)
     @owner.cats.push(self)
-
   end
 
   def self.all
